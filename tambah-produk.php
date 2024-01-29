@@ -37,7 +37,7 @@
             <div class="box">
                 <form action="" method="POST" enctype="multipart/form-data">
                     <select class="inputControl" name="kategori" required>
-                        <option value="">--Pilih--</option>
+                        <option value="">--Pilih Kategori--</option>
                         <?php
                             $kategori = mysqli_query($conn, "select*from tb_category order by id_category desc");
                             while($r = mysqli_fetch_array($kategori)){ 
@@ -47,10 +47,10 @@
                     </select>
                     <input type="text" name="nama" class="inputControl" placeholder="Nama produk" required>
                     <input type="text" name="harga" class="inputControl" placeholder="Harga produk" required>
-                    <input type="file" name="gambar" class="inputControl" required>
+                    <input type="file" name="gambar" class="inputControl" title="Gambar Produk" required>
                     <textarea name="deskripsi" class="inputControl" placeholder="Deskripsi"></textarea><br>
                     <select class="inputControl" name="status">
-                        <option value="">--Pilih--</option>
+                        <option value="">--Pilih Status--</option>
                         <option value="1">Aktif</option>
                         <option value=0">Tidak Aktif</option>
                     </select>
